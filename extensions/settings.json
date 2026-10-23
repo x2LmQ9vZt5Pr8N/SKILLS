@@ -1,0 +1,24 @@
+{
+  "python.languageServer": "Default",
+  "explorer.confirmDelete": false,
+  "files.autoSave": "afterDelay",
+  "explorer.confirmPasteNative": false,
+  "workbench.editor.enablePreview": false,
+  "claudeCode.preferredLocation": "panel",
+  "claudeCode.hideOnboarding": true,
+  "explorer.confirmDragAndDrop": false,
+  "dart.debugSdkLibraries": false,
+  "dart.debugExternalPackageLibraries": false,
+  "dart.previewFlutterUiGuides": true,
+  "editor.formatOnSave": true,
+  "[dart]": {
+    "editor.formatOnSave": true,
+    "editor.formatOnType": true,
+    "editor.rulers": [
+      80
+    ],
+    "editor.selectionHighlight": false,
+    "editor.tabCompletion": "onlySnippets",
+    "editor.wordBasedSuggestions": "off"
+  }
+}

@@ -1,8 +1,8 @@
-# Vicky's Antigravity Supercharged Config & Skills Repository
+# Vicky's Antigravity Supercharged Config, Skills & Extensions Repository
 
-This repository contains the complete personal configuration, custom skills, active plugins, rules, and MCP definitions for Google Antigravity IDE.
+This repository contains the complete personal configuration, custom skills, active plugins, rules, IDE settings, and automated installers for **Google Antigravity IDE** and **VS Code**.
 
-Cloning this repository into any Antigravity installation instantly replicates this exact high-performance, zero-mock, fast-agent environment.
+Cloning this repository into any Antigravity installation instantly replicates this exact high-performance, zero-mock, Flutter & Android-ready environment.
 
 ---
 
@@ -38,31 +38,40 @@ Always loaded on every single turn:
 - `google_maps_platform`: Optimized mapping, routing, and cost control.
 - `modern-web-guidance-plugin`: Modern frontend and web development guidance.
 
-### 4. `archived_plugins/` (Zero-Latency Archive)
+### 4. `extensions/` (Flutter, Android & IDE Setup)
+Complete manifest and automated installers:
+- **Flutter & Dart:** `dart-code.flutter`, `dart-code.dart-code`
+- **Android Native & Java:** `vscjava.vscode-java-pack`, `redhat.java`, `vscjava.vscode-gradle`, `vscjava.vscode-java-debug`, `vscjava.vscode-maven`
+- **AI Coding Assistants:** `anthropic.claude-code`, `openai.chatgpt`, `saoudrizwan.claude-dev`, `qwenlm.qwen-code-vscode-ide-companion`, `obsidianlabs.obsidian-code-by-obsidian-labs`
+- **Languages & Utilities:** Python, Go, Clangd, Docker, Rainbow CSV, PowerShell.
+- **IDE Settings:** Pre-configured `settings.json` with autoSave, Flutter UI guides, Dart rulers, and prompt optimizations.
+
+### 5. `archived_plugins/` (Zero-Latency Archive)
 - Heavy, niche plugins (`science`, `kicad`, `data-agent-kit-plugin`) are safely archived here so they do **not** bloat prompt token budgets or slow down LLM latency during normal development.
 
 ---
 
 ## 🚀 How to Setup on ANY New Antigravity Installation
 
-Run this single command in **PowerShell** on any new computer:
+Run these two commands in **PowerShell** on any new computer:
 
 ```powershell
-# 1. Backup any existing config (if present)
+# Step 1: Clone this repository directly as your Antigravity config
 if (Test-Path "$HOME\.gemini\config") {
     Rename-Item "$HOME\.gemini\config" "config_backup_$((Get-Date).ToString('yyyyMMddHHmmss'))"
 }
+git clone https://x2LmQ9vZt5Pr8N@github.com/x2LmQ9vZt5Pr8N/SKILLS.git "$HOME\.gemini\config"
 
-# 2. Clone this repository directly as your Antigravity config
-git clone https://github.com/x2LmQ9vZt5Pr8N/SKILLS.git "$HOME\.gemini\config"
+# Step 2: 1-Click Complete Setup (Installs all Flutter & Android extensions, configures settings, verifies Android SDK & USB ADB)
+powershell -ExecutionPolicy Bypass -File "$HOME\.gemini\config\setup_flutter_android.ps1"
 ```
 
 ### To Update / Sync Changes:
-Whenever you update skills or settings on one machine, pull them on any other machine:
+Whenever you update skills or settings on one machine, sync them effortlessly:
 
 ```powershell
-cd "$HOME\.gemini\config"
-git pull
+powershell "$HOME\.gemini\config\sync.ps1" -Action pull   # Pull updates
+powershell "$HOME\.gemini\config\sync.ps1" -Action push   # Push new changes
 ```
 
 ---
