@@ -1,0 +1,11 @@
+{
+  "mcpServers": {
+    "google-developer-knowledge": {
+      "serverUrl": "https://developerknowledge.googleapis.com/mcp",
+      "authProviderType": "google_credentials",
+      "auth": {
+        "type": "google_credentials"
+      }
+    }
+  }
+}

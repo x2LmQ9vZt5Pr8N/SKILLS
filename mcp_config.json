@@ -1,0 +1,36 @@
+{
+  "mcpServers": {
+    "rea": {
+      "command": "cmd.exe",
+      "args": [
+        "/d",
+        "/c",
+        "npx",
+        "-y",
+        "rea-agents@6.5.0",
+        "mcp"
+      ]
+    },
+    "notebooks": {
+      "command": "node",
+      "args": [
+        "c:\\Users\\vicky\\.antigravity-ide\\extensions\\googlecloudtools.datacloud-1.1.1-universal\\mcp_servers\\cli\\mcp_proxy_bundle.js",
+        "notebooks-antigravityide"
+      ]
+    },
+    "visualization": {
+      "command": "node",
+      "args": [
+        "c:\\Users\\vicky\\.antigravity-ide\\extensions\\googlecloudtools.datacloud-1.1.1-universal\\mcp_servers\\cli\\mcp_proxy_bundle.js",
+        "visualization-antigravityide"
+      ]
+    },
+    "data-agent-kit": {
+      "command": "node",
+      "args": [
+        "c:\\Users\\vicky\\.antigravity-ide\\extensions\\googlecloudtools.datacloud-1.1.1-universal\\mcp_servers\\cli\\mcp_proxy_bundle.js",
+        "dataAgentKit-antigravityide"
+      ]
+    }
+  }
+}
